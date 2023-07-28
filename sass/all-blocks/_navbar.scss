@@ -1,0 +1,137 @@
+.navbar {
+    height: 70px;
+    background-color: #032541;
+    padding-top: 20px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_box {
+    display: flex;
+    align-items: center;
+}
+
+.text_box {
+    padding-left: 20px;
+    
+    a {
+        padding-left: 30px;
+        color: #fff;
+        font-weight: 600;
+    }
+}
+
+.navbar_list {
+    display: flex;
+    align-items: center;
+    
+    a {
+        padding-right: 30px;
+        color: #fff;
+        font-weight: 600;
+    }
+    
+    .navbar_search {
+        color: #01B4E4;
+        font-size: 28px;
+    }
+    
+    .navbar_plus {
+        position: relative;
+        top: 2px;
+        right: 20px;
+        font-size: 28px;
+        font-weight: 200;
+    }
+    
+    .navbar_item_box {
+        cursor: pointer;
+        position: relative;
+        right: 25px;
+        width: 28px;
+        height: 28px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        
+        a {
+            position: relative;
+            font-size: 13px;
+            padding-left: 4.5px;
+            top: 3.5px;
+        }
+    }
+}
+
+.navbar_item_box:hover {
+    background: #fff;
+    
+    a {
+        color: #000;
+        transition: 0.8s;
+    }
+}
+
+.plus_box {
+    position: absolute;
+    width: 240px;
+    height: 100px;
+    display: flex;
+    z-index: 100;
+    background: #fff;
+    margin-right: 300px;
+    top: 70px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.plus_box_text {
+    position: relative;
+    right: 175px;
+    bottom: 36px;
+    display: none;
+}
+
+.plus_box_text_open {
+    display: block;
+}
+
+.search_text_box {
+    position: relative;
+    right: 1300px;
+    top: 12px;
+    display: none;
+}
+
+.search_box {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    z-index: 100;
+    background: #fff;
+
+    .search_menu {
+        position: relative;
+        color: #000;
+        z-index: 100;
+        top: 33px;
+        left: 10px;
+        font-size: 18px;
+    }
+
+    input {
+        width: 1200px;
+        height: 40px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding-left: 35px;
+    }
+}
+
+.search_open {
+    display: block;
+}
