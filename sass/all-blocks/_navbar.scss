@@ -16,7 +16,8 @@
 }
 
 .text_box {
-    padding-left: 20px;
+    padding-left: 50px;
+    display: flex;
     
     a {
         padding-left: 30px;
@@ -112,7 +113,7 @@
     height: 60px;
     z-index: 100;
     background: #fff;
-
+    
     .search_menu {
         position: relative;
         color: #000;
@@ -121,7 +122,7 @@
         left: 10px;
         font-size: 18px;
     }
-
+    
     input {
         width: 1200px;
         height: 40px;
@@ -134,4 +135,104 @@
 
 .search_open {
     display: block;
+}
+
+.text_box_hover {
+    position: absolute;
+    width: 210px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 100;
+    margin-left: 30px;
+    margin-top: 25px;
+    display: none;
+}
+
+.text_box_hover2 {
+    position: absolute;
+    width: 210px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 100;
+    margin-left: 30px;
+    margin-top: 25px;
+    display: none;
+}
+
+.text_box_hover3 {
+    position: absolute;
+    width: 190px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 100;
+    margin-left: 30px;
+    margin-top: 25px;
+    display: none;
+}
+
+.text_box_hover4 {
+    position: absolute;
+    width: 180px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 5px;
+    z-index: 100;
+    margin-left: 30px;
+    margin-top: 25px;
+    display: none;
+}
+
+.text_box_hover a {
+    padding-left: 20px;
+    color: #000;
+    display: block;
+    padding-top: 14px;
+}
+
+.text_box_hover2 a {
+    padding-left: 20px;
+    color: #000;
+    display: block;
+    padding-top: 14px;
+}
+
+.text_box_hover3 a {
+    padding-left: 20px;
+    color: #000;
+    display: block;
+    padding-top: 14px;
+}
+
+.text_box_hover4 a {
+    padding-left: 20px;
+    color: #000;
+    display: block;
+    padding-top: 14px;
+}
+
+.text_hover1:hover {
+    .text_box_hover {
+        display: block;
+    }
+}
+
+.text_hover2:hover {
+    .text_box_hover2 {
+        display: block;
+    }
+}
+
+.text_hover3:hover {
+    .text_box_hover3 {
+        display: block;
+    }
+}
+
+.text_hover4:hover {
+    .text_box_hover4 {
+        display: block;
+    }
 }
