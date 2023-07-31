@@ -1,1 +1,244 @@
+.movie-list{
+    margin-top: 30px;
+    width: 1300px;
+    height: 423px;
+    display: flex;
+    align-items: top;
+    overflow-x: auto;
+    transition: 0.3s ease-in;
+}
+.selected{
+    display: flex;
+}
+.not__selected{
+    display: none;
 
+}
+.switch_big{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p{
+        font-size: 24px;
+        font-family: "Source Sans Pro";
+    }
+}
+.content{
+    width: 170px;
+    height: 300px;
+    padding-left: 20px;
+    position: relative;
+    border: 1px solid;  
+    &__text{
+        width: 150px;
+        height: 50px;
+        position: absolute;
+        top: 235px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+        p{
+            position: absolute;
+            font-size: 16px;
+            font-family: "Source Sans Pro";
+        }
+        span{
+            position: absolute;
+            font-size: 16px;
+            top: 35px   ;
+
+            color: #00000099;
+            font-family: "Source Sans Pro";
+        }
+    }
+}
+.icon{
+    text-decoration: none;
+    width: 26px;
+    height: 26px;
+    top: 1%;
+    left: 80%;
+    color: rgba(255, 255, 255, 0.298);
+
+    // background-image: url("https://static-00.iconduck.com/assets.00/ellipsis-circle-icon-512x512-p4ocez5q.png");
+    background-size: 26px 26px;
+    background-color: rgb(180, 225, 251);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100  ;
+    &:hover{
+    background-color: rgb(132, 208, 255);
+
+    }   
+}
+
+.content__poster{
+    position: absolute;
+    z-index: 10;
+}
+.switch{
+    width: 246px;
+    height: 29px;
+    border-radius: 20px;
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    a{
+        text-decoration: none;
+        font-size: 16px;
+        font-family: "Source Sans Pro";
+        position: relative;
+        z-index: 10;
+    }
+    .no__click{
+        color: black;
+        transition: 0.5s linear;
+    }
+    .click{
+        background: #C3FF00;
+        background: linear-gradient(to right, #C3FF00 0%, #0DEFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: 0.5s linear;
+    }
+}
+.switch::after{
+    content: "";
+    left: 0px;
+    width: 110px;
+    height: 29px;
+    position: absolute;
+    background-color: rgba(10, 10, 103, 0.889);
+    border-radius: 15px;
+    transition: 0.2s linear ;
+
+}
+.active::after{
+    content: "";
+    width: 127px;
+    height: 29px;
+    position: absolute;
+    left: 119px;
+    transition: 0.2s linear ;
+}
+
+
+.functions{
+    width: 207px;
+    height: 171px;
+    position: absolute;
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #ffffff;
+    display: none;  
+}
+.function{
+    width: 207px;
+    height: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: relative;
+    top: 20px;
+    z-index: 100;
+    a{
+        position: absolute;
+        margin-left: 20px;
+        text-decoration: none;
+        font: 14.4px "Source Sans Pro";
+        color: black;
+    }
+}
+.function:hover{
+    background-color: darkslateblue;
+    a{
+        color: white;
+    }
+
+}
+.function:nth-child(1):hover{
+    border-radius:  8% 8% 100% 0% / 50% 50% 0% 0%  ;
+
+}
+.function:nth-child(4):hover{
+    border-radius:  100% 0% 8% 8% / 0% 0% 50% 50% ;
+    background-color: darkslateblue;
+
+}
+.tools_on{
+    filter: blur(5px);
+}
+.on{
+    display: flex;
+}
+
+
+
+.circle-progressbar {
+    position: relative;
+    position: absolute;
+    top: 68%;
+    left: 17%;
+    z-index: 11;
+    @keyframes growProgressBar {
+      0%,
+      33% {
+        --pgPercentage: 0;
+      }
+      100% {
+        --pgPercentage: var(--value);
+      }
+    }
+    @property --pgPercentage {
+      syntax: "<number>";
+      inherits: false;
+      initial-value: 0;
+    }
+
+    div[role="progressbar"] {
+      --size: 2.5rem;
+      --bg: #081c22;
+      --fg: rgba(20, 193, 20, 0.757);
+      --pgPercentage: var(--value);
+      animation: growProgressBar 3s 1 forwards;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(
+          closest-side,
+          #081c22 80%,
+          transparent 0 99.9%,
+          white 0
+        ),
+        conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: calc(var(--size) / 3.5);
+      color: white;
+    }
+
+    div[role="progressbar"]::before {
+      counter-reset: percentage var(--value);
+      content: counter(percentage) "%";
+    }
+  }
+.black{
+    color: black;
+}
+.red{
+    color: red;
+}
