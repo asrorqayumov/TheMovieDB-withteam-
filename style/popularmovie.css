@@ -15,7 +15,8 @@
     padding-top: 30px;
 }
 .popular__section{
-    justify-content: space-around   ;
+    justify-content: space-between ;
+    display: flex;
 }
 .filter__box{
     padding-top: 30px;
@@ -182,4 +183,10 @@
 }
 .aqua{
     background-color: aqua;
+}
+.movia__box{
+    max-width: 1022;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
