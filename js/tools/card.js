@@ -118,6 +118,7 @@ for (const i in arr_tool) {
     arr_tool[i].addEventListener("click",()=>{
         let child1 = arr_tool[i].children[0]
         let child2 = child1.children[0]
+        console.log(true);
         let zb_arr  = Array.from(heart)
         for (const i in zb_arr) {
             switch (child2) {
