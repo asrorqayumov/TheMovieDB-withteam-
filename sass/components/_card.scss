@@ -138,6 +138,7 @@
 
 
 .functions{
+    cursor: pointer;
     width: 207px;
     height: 171px;
     position: absolute;
@@ -148,9 +149,13 @@
     padding-left: 0;
     justify-content: space-between;
     flex-direction: column;
-    background-color: #ffffff;
     display: none;  
+    top: 35px;
+    z-index: 100;
+    background-color: #fff !important;
 }
+
+
 .function{
     width: 207px;
     height: 41px;
@@ -158,8 +163,9 @@
     align-items: center;
     justify-content: left;
     position: relative;
-    top: 20px;
     z-index: 100;
+    background-color: #ffffff;
+    border-radius: 18px;
     a{
         position: absolute;
         margin-left: 20px;
@@ -178,6 +184,12 @@
 .function:nth-child(1):hover{
     border-radius:  8% 8% 100% 0% / 50% 50% 0% 0%  ;
 
+}
+.function:nth-child(2):hover{
+    border-radius: 0px;
+}
+.function:nth-child(3):hover{
+    border-radius: 0px;
 }
 .function:nth-child(4):hover{
     border-radius:  100% 0% 8% 8% / 0% 0% 50% 50% ;
