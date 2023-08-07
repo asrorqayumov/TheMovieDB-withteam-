@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
     <title>Document</title>
 </head>
 <body>
@@ -62,7 +63,6 @@
                     </div>
                 </div>
                 
-                
                 <ul class="navbar_list">
                     <li class="navbar_item">
                         <a class="navbar_plus" href="#"><i class='bx bx-plus'></i></a>
@@ -113,9 +113,10 @@
     
     <!-- main design -->
     <main>
-        <section class="content">
-            <div class="container">
-                <img class="content_img" src="./img/content-img.jpg">
+        
+        <section class="hero">
+            <div class="container hero_container">
+                <img class="content_img" src="/img/content-img.jpg">
                 <div class="content_text_box">
                     <h2>Присоединяйтесь сегодня</h2>
                     <p>Get access to maintain your own custom personal lists, track what you've seen and search </br>
@@ -148,14 +149,36 @@
                     </div>
                 </div>
             </section>
+            
+            
+            <section class="tab-section">
+                <div class="container">
+                    <div class="tab">
+                        <div class="switch_big">
+                            <p>
+                                В тренде
+                            </p>
+                            <div class="switch">
+                                <a  class="click">Today</a>
+                                <a  class="no__click">This week</a>
+                            </div>
+                        </div>
+                        <div class="movie-list selected">
+                            
+                        </div>
+                        <div class="movie-list not__selected">
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
         </main>
-        <div class="movie-list">
-
-        </div>
-        <script type="module" src="./js/page/profile.js"></script>
+        
+        <script type="module" src="./js/page/profile.js"></script> 
         <script  type="module" src="./js/page/home.js"></script>
-        <!-- <script type="module" src="./js/tools/card.js"></script>
-        <script  type="module" src="./js/tools/popularmovie.js"></script>
-        <script type="module" src="./js/tools/app.js"></script> -->
+        <script type="module" src="./js/tools/card.js"></script>
+        <script type="module" src="./js/tools/app.js"></script>
+        <script src="./js/app.js"></script>
     </body>
     </html>
