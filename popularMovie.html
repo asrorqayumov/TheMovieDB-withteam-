@@ -116,12 +116,12 @@
                         
                         <div class="sort__box2 none">
                             <h3>Sort Results By</h3>
-                            <select>
-                                <option class="option" value="">Popularity Descending</option>
-                                <option class="option" value="">Rating Descending</option>
-                                <option class="option" value="">Rating Ascending</option>
-                                <option class="option" value="">Release Date Descending</option>
-                                <option class="option" value="">Release Date Ascending</option>
+                            <select name="selcted">
+                                <option class="option" value="descendingpopular">Popularity Descending</option>
+                                <option class="option" value="descendingrating">Rating Descending</option>
+                                <option class="option" value="ascending">Rating Ascending</option>
+                                <option class="option" value="datedescending">Release Date Descending</option>
+                                <option class="option" value="dateacending">Release Date Ascending</option>
                                 <option class="option" value="">Title (A-Z)</option>
                                 <option class="option" value="">Title (Z-A)</option>
                             </select>
@@ -214,18 +214,19 @@
                     
                     <div class="movia__box">
                         
-
-                        
                     </div>
                 </section>
             </div>
         </main>
         
         <!-- popular js -->
-        <script src="./js/tools/popularmovie.js"></script>
+        <script type="module" src="./js/tools/popularmovie.js"></script>
         
         <!-- app js -->
-        <script src="/js/tools/app.js"></script>
-        <script src="/js/tools/card.js"></script>
+        <script type="module" src="/js/tools/app.js"></script>
+        <script type="module" src="./js/apis/popularmovie.js"></script>
+        <script type="module" src="./js/page/popularmovie.js"></script>
+        <script type="module" src="/js/tools/card.js"></script>
+
     </body>-
     </html>
