@@ -1,7 +1,7 @@
 .movie-list{
     margin-top: 30px;
-    width: 1300px;
-    height: 423px;
+    width: 1400px;
+    height: 353px;
     display: flex;
     align-items: top;
     overflow-x: auto;
@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: space-between;
     p{
+       
         font-size: 24px;
         font-family: "Source Sans Pro";
     }
@@ -28,11 +29,13 @@
     width: 170px;
     height: 300px;
     padding-left: 20px;
+    margin-right: 0px;
     position: relative;
-    border: 1px solid;  
+  flex-shrink:0 ;
+
     &__text{
         width: 150px;
-        height: 50px;
+        height: 65px;
         position: absolute;
         top: 235px;
         display: flex;
@@ -47,7 +50,7 @@
         span{
             position: absolute;
             font-size: 16px;
-            top: 35px   ;
+            top: 55px   ;
 
             color: #00000099;
             font-family: "Source Sans Pro";
@@ -79,19 +82,22 @@
 }
 
 .content__poster{
+    border-radius: 10px;
     position: absolute;
     z-index: 10;
 }
 .switch{
+    border: 1px solid;
     width: 246px;
     height: 29px;
     border-radius: 20px;
     display: flex;
-    border: 1px solid;
     align-items: center;
     justify-content: space-around;
     position: relative;
     a{
+            cursor: pointer;
+        
         text-decoration: none;
         font-size: 16px;
         font-family: "Source Sans Pro";
@@ -132,6 +138,7 @@
 
 
 .functions{
+    cursor: pointer;
     width: 207px;
     height: 171px;
     position: absolute;
@@ -142,9 +149,13 @@
     padding-left: 0;
     justify-content: space-between;
     flex-direction: column;
-    background-color: #ffffff;
     display: none;  
+    top: 35px;
+    z-index: 100;
+    background-color: #fff !important;
 }
+
+
 .function{
     width: 207px;
     height: 41px;
@@ -152,8 +163,9 @@
     align-items: center;
     justify-content: left;
     position: relative;
-    top: 20px;
     z-index: 100;
+    background-color: #ffffff;
+    border-radius: 18px;
     a{
         position: absolute;
         margin-left: 20px;
@@ -172,6 +184,12 @@
 .function:nth-child(1):hover{
     border-radius:  8% 8% 100% 0% / 50% 50% 0% 0%  ;
 
+}
+.function:nth-child(2):hover{
+    border-radius: 0px;
+}
+.function:nth-child(3):hover{
+    border-radius: 0px;
 }
 .function:nth-child(4):hover{
     border-radius:  100% 0% 8% 8% / 0% 0% 50% 50% ;
