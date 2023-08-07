@@ -9,7 +9,6 @@ function displayMoviesDay(moviesDay) {
     
     let html = "";
     moviesDay.forEach((movie) => {
-        console.log(movie);
         html += `
         <div class="content">
         <a class="icon">
@@ -77,13 +76,14 @@ function displayMoviesWeek(MoviesWeek) {
     
     let html = "";
     MoviesWeek.forEach((movie) => {
-        console.log(movie);
         html += `
         <div class="content">
         <a class="icon">
         <i class="fa-solid fa-ellipsis" style="color: white;"></i>
-        </a>    
+        </a>
+        
         <ul class="functions">
+        <div class="functions_color">
         <li class="function" id="list">
         <a>
         <i class="fa-solid fa-list black" ></i>
@@ -108,6 +108,7 @@ function displayMoviesWeek(MoviesWeek) {
         Ваш рейтинг
         </a>
         </li>
+        </div>
         </ul>
         <img class="content__poster " src="${
             config.BASE_IMG_URL
