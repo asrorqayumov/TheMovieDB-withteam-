@@ -1,11 +1,6 @@
-import * as GetHomeMovies from "../apis/home.js";
 import config from "../../config.js";
 
-let movieListS = document.querySelector(".selected");
-
-let moviesDay = await  GetHomeMovies.getTrendingDay();
-
-function displayMoviesDay(moviesDay) {
+export function displayMoviesDay(moviesDay, movieListS) {
     
     let html = "";
     moviesDay.forEach((movie) => {
@@ -67,12 +62,7 @@ function displayMoviesDay(moviesDay) {
     movieListS.innerHTML = html;
 }
 
-displayMoviesDay(moviesDay)
-
-let MovieListN = document.querySelector(".not__selected")
-let MoviesWeek = await GetHomeMovies.getTrendingWeek()
-
-function displayMoviesWeek(MoviesWeek) {
+export function displayMoviesWeek(MoviesWeek, MovieListN) {
     
     let html = "";
     MoviesWeek.forEach((movie) => {
@@ -136,4 +126,3 @@ function displayMoviesWeek(MoviesWeek) {
     });
     MovieListN.innerHTML = html;
 }
-displayMoviesWeek(MoviesWeek)
