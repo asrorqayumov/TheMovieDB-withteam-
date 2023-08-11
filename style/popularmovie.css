@@ -18,6 +18,9 @@
     justify-content: space-between ;
     display: flex;
 }
+.title__popular{
+    padding-bottom: 30px;
+}
 .filter__box{
     padding-top: 30px;
 }
@@ -79,6 +82,9 @@
 .filter__box2{
     padding-top: 20px;
     border-top: 1px solid;
+}
+.check__label{
+    padding-bottom: 20px;
 }
 #date{    
     width: 150px;
