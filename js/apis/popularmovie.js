@@ -1,9 +1,9 @@
 import Config from "../../config.js";
 
-export  async function getTrendingDay() {
+export async function getPopularMovies(page = 1) {
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/trending/movie/day?language=en-US`,
+      `${Config.BASE_URL}/movie/popular?language=en-US&page=${page}`,
       {
         method: "GET",
         headers: {
@@ -13,18 +13,17 @@ export  async function getTrendingDay() {
         },
       }
     );
-    let response = await  request.json();
-   
+    let response = await request.json();
     return await response.results;
   } catch (error) {
     console.log(error);
   }
 }
 
-export  async function getTrendingWeek() {
+export async function sortMovies(sortType) {
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/trending/movie/week?language=en-US`,
+      `${Config.BASE_URL}/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=${sortType}`,
       {
         method: "GET",
         headers: {
@@ -34,8 +33,8 @@ export  async function getTrendingWeek() {
         },
       }
     );
-    let response = await  request.json();
-   
+
+    let response = await request.json();
     return await response.results;
   } catch (error) {
     console.log(error);
