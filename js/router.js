@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     GetHomeMovies.getTrendingWeek().then((data) => {
       Home.displayMoviesWeek(data, MovieListN);
-      let cards = document.querySelectorAll(".content");
+      let cards = document.querySelectorAll(".content__poster");
       cards.forEach((movieCard) => {
         movieCard.addEventListener("click", (e) => {
          e.preventDefault()
-          history.pushState( e.target.id, null, `/movie.html`);
+          history.pushState( e.target.id, null, `/movie_page.html`);
+          location.reload()
         });
       });
 
