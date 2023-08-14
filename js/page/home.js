@@ -5,7 +5,7 @@ export function displayMoviesDay(moviesDay, movieListS) {
     let html = "";
     moviesDay.forEach((movie) => {
         html += `
-        <div class="content">
+        <div class="content" >
         <a class="icon">
         <i class="fa-solid fa-ellipsis" style="color: white;"></i>
         </a>    
@@ -35,7 +35,7 @@ export function displayMoviesDay(moviesDay, movieListS) {
         </a>
         </li>
         </ul>
-        <img class="content__poster " src="${
+        <img class="content__poster" id="${movie.id}" src="${
             config.BASE_IMG_URL
         }${movie.poster_path}" width="150" height="225" >
         <div class="circle-progressbar">
@@ -63,11 +63,10 @@ export function displayMoviesDay(moviesDay, movieListS) {
 }
 
 export function displayMoviesWeek(MoviesWeek, MovieListN) {
-    
     let html = "";
     MoviesWeek.forEach((movie) => {
         html += `
-        <div class="content">
+        <div class="content" >
         <a class="icon">
         <i class="fa-solid fa-ellipsis" style="color: white;"></i>
         </a>
@@ -100,7 +99,7 @@ export function displayMoviesWeek(MoviesWeek, MovieListN) {
         </li>
         </div>
         </ul>
-        <img class="content__poster " src="${
+        <img class="content__poster" id="${movie.id}"  src="${
             config.BASE_IMG_URL
         }${movie.poster_path}" width="150" height="225" >
         <div class="circle-progressbar">
