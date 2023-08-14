@@ -35,15 +35,18 @@
 
     &__text{
         width: 150px;
-        height: 65px;
+        height: 80px;
         position: absolute;
-        top: 235px;
+        top: 220px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 3px;
+        padding-left: 10px;
         
         p{
             position: absolute;
+            top: 15px;
             font-size: 16px;
             font-family: "Source Sans Pro";
         }
@@ -227,7 +230,7 @@
     }
 
     div[role="progressbar"] {
-      --size: 2.5rem;
+      --size: 34px;
       --bg: #081c22;
       --fg: rgba(20, 193, 20, 0.757);
       --pgPercentage: var(--value);
