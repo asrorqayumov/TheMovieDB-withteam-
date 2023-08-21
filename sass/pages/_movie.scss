@@ -169,6 +169,11 @@
         }
     }
 }
+.ke_no{
+    padding: 10px 0 20px;
+    font-size: 16px;
+    font-family: "Source Sans Pro";
+}
 .full_info{
     display: flex;
     position : relative;
@@ -283,6 +288,8 @@
         }
         &__box{
             width: 360px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid;
             display: flex;
             flex-wrap: wrap;
             row-gap: 5px;

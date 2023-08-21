@@ -244,12 +244,17 @@ export async function keywords_all(id){
   function main_key_key(got) {
     function keywords() {
       let kalit = ``;
-      for (const i of got.keywords) {
-        kalit += `
-        <a class="full_info__key__keywords__box__keyword" style="cursor: pointer;" id = "${i.id}">
-        ${i.name}
-        </a>
-        `;
+      if(got.keywords.length == 0){
+        kalit += `<p class="ke_no"> No keywords have been added yet </p>`
+      }
+      else{
+        for (const i of got.keywords) {
+          kalit += `
+          <a class="full_info__key__keywords__box__keyword" style="cursor: pointer;" id = "${i.id}">
+          ${i.name}
+          </a>
+          `;
+        }
       }
       return kalit;
     }
@@ -295,7 +300,6 @@ export async function coll_all (id){
     coll_box.innerHTML = html
     }
   }
-  Movie.getMovie(id).then(data => {collection(data) , console.log(data)})
+  Movie.getMovie(id).then(data => collection(data))
   
 }
-Movie.Recomendations(724209).then(data => console.log(data))
