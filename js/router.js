@@ -42,7 +42,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     Movie.coll_all(history.state.id)
     Movie.favorite__add(history.state.id , history.state.category)
     Movie.watchlist_add(history.state.id , history.state.category)
+    let lishka = document.querySelectorAll(".full_info__main__top_cast__list__item")
+    let LI = Array.from(lishka)
+    for (const i of LI) {
+      i.addEventListener("click" ,(e)=>{
+        e.preventDefault()
+        history.pushState(e.target.id,null,`/`)
+      })
+    }
   } else if (location.pathname === "popularMovie.html") {
+
   } else if (location.pathname === "profile.html") {
   }else if (location.pathname === "actors.html"){
     Person.barabara(history.pushState.state)
