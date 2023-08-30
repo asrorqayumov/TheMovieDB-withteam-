@@ -57,10 +57,10 @@ export async function hero_all (id){
     <li class="movie_hero__text__actions__action">
     <i class="fa-solid fa-list" style="color:#ffffff;"></i>
     </li>
-    <li class="movie_hero__text__actions__action favorite_add" id="true">
+    <li class="movie_hero__text__actions__action favorite_add" id="false">
     <i class="fa-solid fa-heart" style="color:#ffffff;"></i>
     </li>
-    <li class="movie_hero__text__actions__action">
+    <li class="movie_hero__text__actions__action watchlist_add">
     <i class="fa-solid fa-bookmark" style="color:#ffffff;"></i>
     </li>
     <li class="movie_hero__text__actions__action">
@@ -133,14 +133,14 @@ export async function rec_all(id){
       }
       lil();
       html += `
-    <h3 class="rec__h3">
-    Recomendations
-    </h3>
-    
-    <ul class="rec__list">
-    ${lil()}
-    </ul>
-    `;
+      <h3 class="rec__h3">
+      Recomendations
+      </h3>
+      
+      <ul class="rec__list">
+      ${lil()}
+      </ul>
+      `;
     }
     rec.innerHTML = html;
   }
@@ -281,7 +281,7 @@ export async function coll_all (id){
   function collection(got){
     let html = ``
     if(got.belongs_to_collection == null){
-
+      
     }
     else{
       html += `
@@ -297,21 +297,73 @@ export async function coll_all (id){
       </div>
       </div>
       `
-    coll_box.innerHTML = html
+      coll_box.innerHTML = html
     }
   }
   Movie.getMovie(id).then(data => collection(data))
   
 }
-
-let heart  = document.querySelector(".favorite_add")
-heart.addEventListener("click",()=>{
-  switch(heart.id){
-    case "true":
-      heart.id = "false"
-    break;
-    case "false":
-      heart.id = "true"
-      break;
+export async function favorite__add(id,type){
+  function state (data){
+    setTimeout(() => {
+      let heart  = document.querySelector(".favorite_add")
+      let r_heart = document.querySelector(".fa-heart")
+      let favorite = data.favorite
+      if(favorite = true){
+        r_heart.style.cssText = "color:red;"
+      }
+      else{
+        r_heart.style.cssText = "color:white;"
+      }
+        heart.addEventListener("click",()=>{
+          switch(favorite){
+            case true:
+            heart.id = "false"
+            r_heart.style.cssText = "color:white;"
+            favorite = false
+            break;
+            case false:
+            heart.id = "true"
+            r_heart.style.cssText = "color:red;"
+            favorite = true
+            break;
+          }
+         
+          Movie.category(id,type,favorite).then()
+          console.log(data);
+        })
+    }, 2000);
   }
-})
+  Movie.states(id).then(data => state(data))
+}
+export async function watchlist_add(id,type){
+  function state (data){
+    setTimeout(() => {
+      let bookmark  = document.querySelector(".watchlist_add")
+      let r_bookmark = document.querySelector(".fa-bookmark")
+      let watchlist = data.watchlist
+      if(watchlist = true){
+        r_bookmark.style.cssText = "color:red;"
+      }
+      else{
+        r_bookmark.style.cssText = "color:white;"
+      }
+        bookmark.addEventListener("click",()=>{
+          switch(watchlist){
+            case true:
+            r_bookmark.style.cssText = "color:white;"
+            watchlist = false
+            break;
+            case false:
+            r_bookmark.style.cssText = "color:red;"
+            watchlist = true
+            break;
+          }
+         
+          Movie.watchlist(id,type,watchlist).then()
+          console.log(data);
+        })
+    }, 2000);
+  }
+  Movie.states(id).then(data => state(data))
+}
