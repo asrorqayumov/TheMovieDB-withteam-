@@ -33,12 +33,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     
   } else if (location.pathname === "/movie_page.html") {
-    console.log(history.state.category);
+    console.log(history.state.id);
     Movie.hero_all(history.state.id)
     Movie.keywords_all(history.state.id)
     Movie.rec_all(history.state.id)
     Movie.top_cast_all(history.state.id)
     Movie.coll_all(history.state.id)
+    Movie.favorite__add(history.state.id , history.state.category)
   } else if (location.pathname === "popularMovie.html") {
   } else if (location.pathname === "profile.html") {
   }
