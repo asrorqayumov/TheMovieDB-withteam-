@@ -45,6 +45,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   } else if (location.pathname === "popularMovie.html") {
   } else if (location.pathname === "profile.html") {
   }else if (location.pathname === "actors.html"){
-    Person.barabara()
+    Person.barabara(history.pushState.state)
   }
 });
