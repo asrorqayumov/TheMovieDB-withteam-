@@ -1,6 +1,7 @@
 import * as GetHomeMovies from "./apis/home.js";
 import * as Home from "./page/home.js";
 import * as Movie from "./page/movie_page.js"
+import * as Person from "./page/actor.js"
 let account_id = 20195959;
 document.addEventListener("DOMContentLoaded", async () => {
   if (location.pathname === "/index.html" || location.pathname === "/") {
@@ -43,5 +44,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     Movie.watchlist_add(history.state.id , history.state.category)
   } else if (location.pathname === "popularMovie.html") {
   } else if (location.pathname === "profile.html") {
+  }else if (location.pathname === "actors.html"){
+    Person.barabara()
   }
 });

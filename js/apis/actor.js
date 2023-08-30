@@ -1,9 +1,9 @@
 import Config from "../../config.js";
 
-export async function getPopularMovies() {
+export async function getPopularMovies(id) {
     try {
       const request = await fetch(
-        `${Config.BASE_URL}/person/person_id?language=en-US`,
+        `${Config.BASE_URL}/person/${id}?language=en-US`,
         {
             method: 'GET',
             headers: {
