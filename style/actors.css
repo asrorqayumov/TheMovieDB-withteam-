@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    display: flex;
+}
+.box1{
+    padding-top: 50px;
+}
+.actorimg{
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+.bx{
+    font-size: 35px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+.title{
+    padding-bottom: 20px;
+}
+.personal__box{
+    display: block;
+}
+.api{
+    color: rgb(0, 140, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.box2{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+.actor__name{
+    font-size: 40px;
+}
+.biography__title{
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}

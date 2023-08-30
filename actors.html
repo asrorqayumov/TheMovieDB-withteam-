@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/actors.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>actors</title>
+</head>
+<body>
+    <!-- navbar design -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar_menu">
+                <div class="logo_box">
+                    <a href="./popularMovie.html">
+                        <img src="/img/logo.svg" alt="logo" width="150px">
+                    </a>
+                    
+                    <div class="text_box">
+                        <div class="text_hover1">
+                            <a href="#">Фильмы</a>
+                            
+                            <div class="text_box_hover">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                        <div class="text_hover2">
+                            <a href="#">Сериалы</a>
+                            
+                            <div class="text_box_hover2">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                        <div class="text_hover3">
+                            <a href="#">Люди</a>
+                            
+                            <div class="text_box_hover3">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                        <div class="text_hover4">
+                            <a href="#">Ещё</a>
+                            
+                            <div class="text_box_hover4">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <ul class="navbar_list">
+                    <li class="navbar_item">
+                        <a class="navbar_plus" href="#"><i class='bx bx-plus'></i></a>
+                    </li>
+                    <div class="plus_box_text">
+                        <div class="plus_box">
+                            <p>Не можете найти фильм или сериал? Войдите на сайт, чтобы добавить его.</p>
+                        </div>
+                    </div>
+                    <li>
+                        <div class="navbar_item_box">
+                            <a href="#">RU</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.themoviedb.org/login">Войти</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.themoviedb.org/signup">Присоединиться к TMDB</a>
+                    </li>
+                    <li>
+                        <a class="navbar_search" href="#"><i class='bx bx-search-alt-2'></i></a>
+                    </li>
+                    <div class="search_text_box">
+                        <div class="search_box">
+                            <a href="#" class="search_menu"><i class='bx bx-search-alt-2'></i></a>
+                            <input class="search_input" type="search" placeholder="Найти фильм, сериал, персону...">
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="actor__main">
+        <section class="actor__section">
+            <div class="container">
+                <div class="box">
+                    <div class="box1">
+                        <img class="actorimg" src="" alt="actor" width="250" height="400">
+                        <div class="internet__box">
+                            <i class='bx bxl-facebook-circle'></i>
+                            <i class='bx bxl-twitter' ></i>
+                            <i class='bx bxl-instagram' ></i>
+                            <i class='bx bxl-tiktok' ></i>
+                        </div>
+                        <div class="personalinfo__box">
+                            <h2 class="title">Personal Info</h2>
+                            <div class="personal__box">
+                                <p>Known For</p>
+                                <p class="acting api"></p>
+                            </div>
+                            <div class="personal__box">
+                                <p>Gender</p>
+                                <p class="gender api"></p>
+                            </div>
+                            <div class="personal__box">
+                                <p>Birthday</p>
+                                <p class="birthday api"></p>
+                            </div>
+                            <div class="personal__box">
+                                <p>Place of Birth</p>
+                                <p class="placeofbirth api"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <h1 class="actor__name"></h1>
+                        <h2 class="biography__title">Biography</h2>
+                        <p class="biography"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
