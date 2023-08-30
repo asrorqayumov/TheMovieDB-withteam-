@@ -57,7 +57,7 @@ export async function hero_all (id){
     <li class="movie_hero__text__actions__action">
     <i class="fa-solid fa-list" style="color:#ffffff;"></i>
     </li>
-    <li class="movie_hero__text__actions__action">
+    <li class="movie_hero__text__actions__action favorite_add" id="true">
     <i class="fa-solid fa-heart" style="color:#ffffff;"></i>
     </li>
     <li class="movie_hero__text__actions__action">
@@ -303,3 +303,15 @@ export async function coll_all (id){
   Movie.getMovie(id).then(data => collection(data))
   
 }
+
+let heart  = document.querySelector(".favorite_add")
+heart.addEventListener("click",()=>{
+  switch(heart.id){
+    case "true":
+      heart.id = "false"
+    break;
+    case "false":
+      heart.id = "true"
+      break;
+  }
+})
