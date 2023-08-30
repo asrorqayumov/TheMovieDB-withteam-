@@ -6,51 +6,6 @@ let list2 = document.querySelectorAll(".not__selected")
 let index = 0;
 let index1=1;
 
-// let base = {
-//     p1 :true,
-//     p2:false,
-//     list1:true,
-//     list2:false,
-//     tab:false
-// }
-// document.addEventListener("DOMContentLoaded",()=>{
-//     let key =JSON.parse( localStorage.getItem("base"))
-//     if(key.p1 == true){
-//         p1.classList.add("click")
-//         p1.classList.remove("no__click")
-//     }
-//     else{
-//         p1.classList.remove("click")
-//         p1.classList.add("no__click")
-//     }
-//     if(key.p2 == true){
-//         p2.classList.remove("np__click")
-//         p2.classList.add("click")
-//     }
-//     else{
-//         p2.classList.add("np__click")
-//         p2.classList.remove("click")
-//     }
-//     if (key.list1 == true){
-//         list1.classList.add("selected")
-//         list1.classList.remove("not__selected")
-//         list2.classList.add("not__selected")
-//         list2.classList.remove("selected")
-//     }
-//     else{
-//         list1.classList.remove("selected")
-//         list1.classList.add("not__selected")
-//         list2.classList.remove("not__selected")
-//     }
-//     if(key.tab == true){
-//         tab__btn.classList.add("active")
-//         console.log(base.tab);
-//     }
-//     else{
-//         tab__btn.classList.remove("active")
-
-//     }
-// })
 p1[index].addEventListener("click" , ()=>{
     tab__btn[index].classList.remove("active")
     p1[index].classList.add("click")
@@ -101,7 +56,7 @@ p2[index1].addEventListener("click" , ()=>{
     list2[index1].classList.add("selected")
    
 })
-setTimeout(()=>{
+setTimeout(()=> {
     let tools = document.querySelectorAll(".functions")
     let text = document.querySelectorAll(".content__text")
     let poster = document.querySelectorAll(".content__poster")
@@ -131,7 +86,6 @@ setTimeout(()=>{
         let arr_a = Array.from(a)
         for ( let i of arr_a){
           return i   
-=======
 }
 unic(heart)
 
