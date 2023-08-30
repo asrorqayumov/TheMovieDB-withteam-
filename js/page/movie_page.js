@@ -60,7 +60,7 @@ export async function hero_all (id){
     <li class="movie_hero__text__actions__action favorite_add" id="false">
     <i class="fa-solid fa-heart" style="color:#ffffff;"></i>
     </li>
-    <li class="movie_hero__text__actions__action">
+    <li class="movie_hero__text__actions__action watchlist_add">
     <i class="fa-solid fa-bookmark" style="color:#ffffff;"></i>
     </li>
     <li class="movie_hero__text__actions__action">
@@ -330,6 +330,37 @@ export async function favorite__add(id,type){
           }
          
           Movie.category(id,type,favorite).then()
+          console.log(data);
+        })
+    }, 2000);
+  }
+  Movie.states(id).then(data => state(data))
+}
+export async function watchlist_add(id,type){
+  function state (data){
+    setTimeout(() => {
+      let bookmark  = document.querySelector(".watchlist_add")
+      let r_bookmark = document.querySelector(".fa-bookmark")
+      let watchlist = data.watchlist
+      if(watchlist = true){
+        r_bookmark.style.cssText = "color:red;"
+      }
+      else{
+        r_bookmark.style.cssText = "color:white;"
+      }
+        bookmark.addEventListener("click",()=>{
+          switch(watchlist){
+            case true:
+            r_bookmark.style.cssText = "color:white;"
+            watchlist = false
+            break;
+            case false:
+            r_bookmark.style.cssText = "color:red;"
+            watchlist = true
+            break;
+          }
+         
+          Movie.watchlist(id,type,watchlist).then()
           console.log(data);
         })
     }, 2000);
