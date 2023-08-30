@@ -5,7 +5,7 @@ export function displayMoviesDay(moviesDay, movieListS) {
     let html = "";
     moviesDay.forEach((movie) => {
         html += `
-        <div class="content" >
+        <div class="content" id="movie">
         <a class="icon">
         <i class="fa-solid fa-ellipsis" style="color: white;"></i>
         </a>    
