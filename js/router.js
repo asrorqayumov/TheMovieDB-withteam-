@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     Movie.top_cast_all(history.state.id)
     Movie.coll_all(history.state.id)
     Movie.favorite__add(history.state.id , history.state.category)
+    Movie.watchlist_add(history.state.id , history.state.category)
   } else if (location.pathname === "popularMovie.html") {
   } else if (location.pathname === "profile.html") {
   }
