@@ -54,6 +54,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   } else if (location.pathname === "profile.html") {
   }else if (location.pathname === "actors.html"){
-    Person.barabara(history.pushState.state)
+    console.log("History.State: ", history.state);
   }
 });

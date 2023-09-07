@@ -46,3 +46,4 @@ export async function barabara(id){
     }
     actorapi.getPopularMovies(id).then(data => data)
 }
+
