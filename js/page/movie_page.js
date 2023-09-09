@@ -166,7 +166,7 @@ export async function top_cast_all(id){
       for (let i = 0; i < solution; i++) {
         lishka += `
         <li class="full_info__main__top_cast__list__item"} id = "${top_cast[i].id}">
-        <img src="${config.BASE_IMG_URL}${top_cast[i].profile_path}" width="138" height="175" style="border-radius: 15% 15% 0% 0% / 10% 10% 0% 0% ;">
+        <img src="${config.BASE_IMG_URL}${top_cast[i].profile_path}" width="138" height="175" class = "movie_actor_poster" style="border-radius: 15% 15% 0% 0% / 10% 10% 0% 0% ;">
         <div class="full_info__main__top_cast__list__item__text">        
         <a class="full_info__main__top_cast__list__item__text__h3">
         ${top_cast[i].name}

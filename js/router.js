@@ -1,7 +1,11 @@
 import * as GetHomeMovies from "./apis/home.js";
 import * as Home from "./page/home.js";
 import * as Movie from "./page/movie_page.js"
+import * as Actor from "./page/actor.js"
 let account_id = 20195959;
+window.addEventListener("popstate", (e)=>{
+  location.reload();
+})
 document.addEventListener("DOMContentLoaded", async () => {
   if (location.pathname === "/index.html" || location.pathname === "/") {
     let movieListS = document.querySelector(".selected");
@@ -41,17 +45,20 @@ document.addEventListener("DOMContentLoaded", async () => {
     Movie.coll_all(history.state.id)
     Movie.favorite__add(history.state.id , history.state.category)
     Movie.watchlist_add(history.state.id , history.state.category)
-    let lishka = document.querySelectorAll(".full_info__main__top_cast__list__item")
-    let LI = Array.from(lishka)
-    for (const i of LI) {
-      i.addEventListener("click" ,(e)=>{
-        e.preventDefault()
-        history.pushState(e.target.id,null,`/actors.html`)
-        location.reload()
+    setTimeout(() => {
+      let lishka = document.querySelectorAll(".movie_actor_poster")
+      console.log(lishka);
+      lishka.forEach((poster) => {
+        poster.addEventListener("click" , (e) => {
+          e.preventDefault()
+          history.pushState(e.target.parentElement.id,null,`/actors.html`)
+          location.reload()
+        })
       })
-    }
-  } else if (location.pathname === "popularMovie.html") {
-
+    }, 2000);
+  } else if (location.pathname === "/actors.html") {
+    console.log(history.state);
+    Actor.Main_Actor(history.state)
   } else if (location.pathname === "profile.html") {
   }
 });
