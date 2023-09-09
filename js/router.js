@@ -46,7 +46,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     for (const i of LI) {
       i.addEventListener("click" ,(e)=>{
         e.preventDefault()
-        history.pushState(e.target.id,null,`/`)
+        history.pushState(e.target.id,null,`/actors.html`)
+        location.reload()
       })
     }
   } else if (location.pathname === "popularMovie.html") {
