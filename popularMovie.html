@@ -17,17 +17,54 @@
         <div class="container">
             <div class="navbar_menu">
                 <div class="logo_box">
-                    <a href="popularMovie.html">
-                        <img src="./img/logo.svg" alt="logo" width="150px">
+                    <a href="./popularMovie.html">
+                        <img src="/img/logo.svg" alt="logo" width="150px">
                     </a>
                     
                     <div class="text_box">
-                        <a href="#">Фильмы</a>
-                        <a href="#">Сериалы</a>
-                        <a href="#">Люди</a>
-                        <a href="#">Ещё</a>
+                        <div class="text_hover1">
+                            <a href="#">Фильмы</a>
+                            
+                            <div class="text_box_hover">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                        <div class="text_hover2">
+                            <a href="#">Сериалы</a>
+                            
+                            <div class="text_box_hover2">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                        <div class="text_hover3">
+                            <a href="#">Люди</a>
+                            
+                            <div class="text_box_hover3">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
+                        <div class="text_hover4">
+                            <a href="#">Ещё</a>
+                            
+                            <div class="text_box_hover4">
+                                <a href="#">Популярные</a>
+                                <a href="#">Смотрят сейчас</a>
+                                <a href="#">Ожидаемые</a>
+                                <a href="#">Лучшие</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 
                 <ul class="navbar_list">
                     <li class="navbar_item">
@@ -44,10 +81,10 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#">Войти</a>
+                        <a target="_blank" href="https://www.themoviedb.org/login">Войти</a>
                     </li>
                     <li>
-                        <a href="#">Присоединиться к TMDB</a>
+                        <a target="_blank" href="https://www.themoviedb.org/signup">Присоединиться к TMDB</a>
                     </li>
                     <li>
                         <a class="navbar_search" href="#"><i class='bx bx-search-alt-2'></i></a>
@@ -68,121 +105,132 @@
     <main class="popular">
         <div class="container">
             <section class="popular__section">
-                <h1 class="title__popular">Popular Movies</h1>
-                <div class="filter__box">
-                    <div class="sort__box">
-                        <div class="sort__box1">
-                            <h2>Sort</h2>
-                            <i class="fa-solid fa-chevron-down"></i>
-                            <i class="fa-solid fa-chevron-right none"></i>
-                        </div>
-                        
-                        <div class="sort__box2 none">
-                            <h3>Sort Results By</h3>
-                            <select>
-                                <option class="option" value="">Popularity Descending</option>
-                                <option class="option" value="">Rating Descending</option>
-                                <option class="option" value="">Rating Ascending</option>
-                                <option class="option" value="">Release Date Descending</option>
-                                <option class="option" value="">Release Date Ascending</option>
-                                <option class="option" value="">Title (A-Z)</option>
-                                <option class="option" value="">Title (Z-A)</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="filter__all">
-                        <div class="filter__box1">
-                            <h2>Filter</h2>
-                            <i class="fa-solid fa-chevron-down down"></i>
-                            <i class="fa-solid fa-chevron-right right none"></i>
-                        </div>
-                        
-                        <div class="hide__box none">
-                            <div class="filter__box2">
-                                <h3>Release Dates</h3>
-                                <form action="#" class="change__date">
-                                    <label for="date" class="check__label">from</label>
-                                    <input type="date" id="date">
-                                    <br>
-                                    <label for="to" class="check__label" >to</label>
-                                    <input type="date" id="to">
-                                </form>
+                <form class="formall">
+                    <div class="filter__box">
+                        <h1 class="title__popular">Popular Movies</h1>
+                        <div class="sort__box">
+                            <div class="sort__box1">
+                                <h2>Sort</h2>
+                                <i class="fa-solid fa-chevron-down"></i>
+                                <i class="fa-solid fa-chevron-right none"></i>
                             </div>
                             
-                            <div class="genre__box">
-                                <h2 class="genres__title">Genres</h2>
-                                <div class="genres__type--box">
-                                    <button class="боевик button-genres">боевик</button>
-                                    <button class="вестерн button-genres">вестерн</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="военный button-genres">военный</button>
-                                    <button class="детектив button-genres">детектив</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="документальный button-genres">документальный</button>
-                                    <button class="драма button-genres">драма</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="история button-genres">история</button>
-                                    <button class="комедия button-genres">комедия</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="криминал button-genres">криминал</button>
-                                    <button class="мелодрама button-genres">мелодрама</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="музыка button-genres">музыка</button>
-                                    <button class="мультфильм button-genres">мультфильм</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="приключения button-genres">приключения</button>
-                                    <button class="семейный button-genres">семейный</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="телевизионный button-genres">телевизионный фильм</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="триллер button-genres">триллер</button>
-                                    <button class="ужасы button-genres">ужасы</button>
-                                </div>
-                                <div class="genres__type--box">
-                                    <button class="фантастика button-genres">фантастика</button>
-                                    <button class="фэнтези button-genres">фэнтези</button>
-                                </div>
+                            <div class="sort__box2 none">
+                                <h3>Sort Results By</h3>
+                                <select name="selected" class="selected">
+                                    <option class="option" value=""></option>
+                                    <option class="option" value="popularity.desc">Popularity Descending</option>
+                                    <option class="option" value="popularity.asc">Popularity Ascending</option>
+                                    <option class="option" value="revenue.desc">Rating Descending</option>
+                                    <option class="option" value="revenue.asc">Rating Ascending</option>
+                                    <option class="option" value="primary_release_date.desc">Release Date Descending</option>
+                                    <option class="option" value="primary_release_date.asc">Release Date Ascending</option>
+                                    <option class="option" value="vote_average.desc">Title (A-Z)</option>
+                                    <option class="option" value="vote_average.asc">Title (Z-A)</option>
+                                </select>
                             </div>
-                            <div class="certification">
-                                <h2>Certification</h2>
-                                <div class="certification__btn">
-                                    <button class="certification__type">Nr</button>
-                                    <button class="certification__type">G</button>
-                                    <button class="certification__type">PG</button>
-                                    <button class="certification__type">PG-13</button>
-                                </div>
-                                <div class="certification__btn">
-                                    <button class="certification__type">R</button>
-                                    <button class="certification__type">NC-17</button>
-                                </div>
+                        </div>
+                        <div class="filter__all">
+                            <div class="filter__box1">
+                                <h2>Filter</h2>
+                                <i class="fa-solid fa-chevron-down down"></i>
+                                <i class="fa-solid fa-chevron-right right none"></i>
                             </div>
                             
-                            <div class="movie__name">
-                                <h2>Keywords</h2>
-                                <input type="text" placeholder="Filter by keywords..." class="filter">
-                            </div>
-                        </div>                    
-                    </div>
-                    <button class="search">Search</button>
-                    <div class="movia__box">
-                        
-                    </div>
-                </section>
+                            <div class="hide__box none">
+                                <div class="filter__box2">
+                                    <h3>Release Dates</h3>
+                                    <form action="#" class="change__date">
+                                        <label for="date" class="check__label">from</label>
+                                        <input type="date" id="date">
+                                        <br>
+                                        <label for="to" class="check__label" >to</label>
+                                        <input type="date" id="to">
+                                    </form>
+                                </div>
+                                
+                                <div class="genre__box">
+                                    <h2 class="genres__title">Genres</h2>
+                                    <div class="genres__type--box">
+                                        <button class="боевик button-genres">боевик</button>
+                                        <button class="вестерн button-genres">вестерн</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="военный button-genres">военный</button>
+                                        <button class="детектив button-genres">детектив</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="документальный button-genres">документальный</button>
+                                        <button class="драма button-genres">драма</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="история button-genres">история</button>
+                                        <button class="комедия button-genres">комедия</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="криминал button-genres">криминал</button>
+                                        <button class="мелодрама button-genres">мелодрама</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="музыка button-genres">музыка</button>
+                                        <button class="мультфильм button-genres">мультфильм</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="приключения button-genres">приключения</button>
+                                        <button class="семейный button-genres">семейный</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="телевизионный button-genres">телевизионный фильм</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="триллер button-genres">триллер</button>
+                                        <button class="ужасы button-genres">ужасы</button>
+                                    </div>
+                                    <div class="genres__type--box">
+                                        <button class="фантастика button-genres">фантастика</button>
+                                        <button class="фэнтези button-genres">фэнтези</button>
+                                    </div>
+                                </div>
+                                <div class="certification">
+                                    <h2>Certification</h2>
+                                    <div class="certification__btn">
+                                        <button class="certification__type">Nr</button>
+                                        <button class="certification__type">G</button>
+                                        <button class="certification__type">PG</button>
+                                        <button class="certification__type">PG-13</button>
+                                    </div>
+                                    <div class="certification__btn">
+                                        <button class="certification__type">R</button>
+                                        <button class="certification__type">NC-17</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="movie__name">
+                                    <h2>Keywords</h2>
+                                    <input type="text" placeholder="Filter by keywords..." class="filter" value="" name="filter">
+                                </div>
+                            </div>                    
+                        </div>
+                        <button class="search" type="submit">Search</button>
+                </form>
             </div>
-        </main>
-        
-        <!-- popular js -->
-        <script src="./js/popularmovie.js"></script>
-        
-        <!-- app js -->
-        <script src="/js/app.js"></script>
-    </body>
-    </html>
+            
+            
+            <div class="movia__box">
+                
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- popular js -->
+<script type="module" src="./js/tools/popularmovie.js"></script>
+
+<!-- app js -->
+<script type="module" src="/js/tools/app.js"></script>
+<script type="module" src="./js/apis/popularmovie.js"></script>
+<script type="module" src="./js/page/popularmovie.js"></script>
+<script type="module" src="/js/tools/card.js"></script>
+
+</body>-
+</html>

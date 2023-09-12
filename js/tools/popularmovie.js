@@ -31,7 +31,6 @@ iconrigt2.addEventListener('click',()=>{
 
 const genresBtn = document.querySelectorAll('.button-genres')
 const arrBtns = Array.from(genresBtn);
-console.log(arrBtns);
 
 for (const iterator of arrBtns) {
     iterator.addEventListener("click",()=>{
