@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }, 2000);
   } else if (location.pathname === "/actors.html") {
     console.log(history.state);
-    Actor.Main_Actor(history.state)
+    Actor.Main_Actor(history.state) 
   } else if (location.pathname === "profile.html") {
   }
 });

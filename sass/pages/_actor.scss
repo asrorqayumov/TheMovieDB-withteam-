@@ -1,7 +1,8 @@
 .actor_movie_simple{
     width: 890px;
-    height: 287px;
+    height: 350px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-direction: column;
     &_h3{
@@ -11,15 +12,23 @@
     }
     &_list{
         width: 880px;
-        height: 253px;
-        overflow-x: auto;
+        height: 280px;
         display: flex;
-        justify-content: space-evenly;
+     
+        overflow-x: auto;
         flex-wrap: nowrap;
         &_item{
             width: 130px;
             height: 235px;
-            border: 1px solid;
+            margin-right: 30px;
+            &_title{
+                width: 130px;
+                height: 20px;
+                margin-left: 10px;
+                font-size: 14px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
         }
     }
 }
