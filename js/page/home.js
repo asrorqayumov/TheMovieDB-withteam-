@@ -163,7 +163,7 @@ export function displayMoviesTv(Movies_tv,  not__selected_tv) {
         </li>
         </div>
         </ul>
-        <img class="content__poster" id="${movie.id}"  src="${
+        <img class="content__poster_one" id="${movie.id}"  src="${
             config.BASE_IMG_URL
         }${movie.poster_path}" width="150" height="225" >
         <div class="circle-progressbar">
