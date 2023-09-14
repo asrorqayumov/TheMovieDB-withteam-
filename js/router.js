@@ -30,7 +30,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         movieCard.addEventListener("click", (e) => {
           e.preventDefault();
           let id = e.target.id
-          history.pushState({ id }, null, `/movie_page.html`);
+          history.pushState({id:id}, null, `/movie_page.html`);
+          location.reload()
+        });
+      });
+      let cards_one = document.querySelectorAll(".content__poster_one");
+      cards_one.forEach((movieCard) => {
+        movieCard.addEventListener("click", (e) => {
+          e.preventDefault();
+          let id = e.target.id
+          history.pushState({id:id}, null, `/tv-page.html`);
           location.reload()
         });
       });
