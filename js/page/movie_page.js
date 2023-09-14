@@ -156,10 +156,17 @@ export async function top_cast_all(id){
     let top_cast = got.cast;
     function lishka() {
       let lishka = "";
-      for (let i = 0; i < 10; i++) {
+      let solution = 0;
+      if(top_cast.length <=10){
+        solution = top_cast.length
+      }
+      else{
+        solution = 10
+      }
+      for (let i = 0; i < solution; i++) {
         lishka += `
-        <li class="full_info__main__top_cast__list__item" id = "${top_cast[i].id}">
-        <img src="${config.BASE_IMG_URL}${top_cast[i].profile_path}" width="138" height="175" style="border-radius: 15% 15% 0% 0% / 10% 10% 0% 0% ;">
+        <li class="full_info__main__top_cast__list__item"} id = "${top_cast[i].id}">
+        <img src="${config.BASE_IMG_URL}${top_cast[i].profile_path}" width="138" height="175" class = "movie_actor_poster" style="border-radius: 15% 15% 0% 0% / 10% 10% 0% 0% ;">
         <div class="full_info__main__top_cast__list__item__text">        
         <a class="full_info__main__top_cast__list__item__text__h3">
         ${top_cast[i].name}
@@ -187,7 +194,7 @@ export async function top_cast_all(id){
     </div>
     
     
-    `;
+    `;  
     full_info__main.innerHTML = html;
   }
   Movie.Credits(id).then((data) => {
@@ -309,12 +316,6 @@ export async function favorite__add(id,type){
       let heart  = document.querySelector(".favorite_add")
       let r_heart = document.querySelector(".fa-heart")
       let favorite = data.favorite
-      if(favorite = true){
-        r_heart.style.cssText = "color:red;"
-      }
-      else{
-        r_heart.style.cssText = "color:white;"
-      }
         heart.addEventListener("click",()=>{
           switch(favorite){
             case true:
@@ -342,12 +343,6 @@ export async function watchlist_add(id,type){
       let bookmark  = document.querySelector(".watchlist_add")
       let r_bookmark = document.querySelector(".fa-bookmark")
       let watchlist = data.watchlist
-      if(watchlist = true){
-        r_bookmark.style.cssText = "color:red;"
-      }
-      else{
-        r_bookmark.style.cssText = "color:white;"
-      }
         bookmark.addEventListener("click",()=>{
           switch(watchlist){
             case true:

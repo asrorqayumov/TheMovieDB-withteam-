@@ -1,0 +1,25 @@
+.actor_movie_simple{
+    width: 890px;
+    height: 287px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &_h3{
+        font-size: 20px;
+        margin-bottom: 8px;
+        font-family: "Source Sans Pro";
+    }
+    &_list{
+        width: 880px;
+        height: 253px;
+        overflow-x: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+        &_item{
+            width: 130px;
+            height: 235px;
+            border: 1px solid;
+        }
+    }
+}

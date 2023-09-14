@@ -129,7 +129,6 @@ export function displayMoviesWeek(MoviesWeek, MovieListN) {
 export function displayMoviesTv(Movies_tv,  not__selected_tv) {
     let html = "";
     Movies_tv.forEach((movie) => {
-        console.log(movie);
         html += `
         <div class="content" >
         <a class="icon">
@@ -194,6 +193,7 @@ export function displayMoviesTv(Movies_tv,  not__selected_tv) {
 export function displayMoviesKino(Movies_tv_kino,  selected_tv) {
     let html = "";
     Movies_tv_kino.forEach((movie) => {
+        console.log(movie);
         html += `
         <div class="content" >
         <a class="icon">
@@ -243,10 +243,10 @@ export function displayMoviesKino(Movies_tv_kino,  selected_tv) {
         </div>
         <div class="content__text">
         <p class="content__text__heading">
-        ${movie.original_title}
+        ${movie.original_name}
         </p>
         <span>
-        ${movie.release_date}
+        ${movie.first_air_date}
         </span>
         </div>
         </div>

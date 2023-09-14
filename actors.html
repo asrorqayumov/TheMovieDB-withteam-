@@ -3,15 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/main.css">
-    <title>Search page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/actors.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>actors</title>
 </head>
 <body>
+    <!-- navbar design -->
     <nav class="navbar">
         <div class="container">
             <div class="navbar_menu">
                 <div class="logo_box">
-                    <a href="index.html">
+                    <a href="./popularMovie.html">
                         <img src="/img/logo.svg" alt="logo" width="150px">
                     </a>
                     
@@ -59,6 +63,7 @@
                     </div>
                 </div>
                 
+                
                 <ul class="navbar_list">
                     <li class="navbar_item">
                         <a class="navbar_plus" href="#"><i class='bx bx-plus'></i></a>
@@ -92,28 +97,27 @@
             </div>
         </div>
     </nav>
-    
-    
-    <div class="container">
-        <div class="select-box">
-            <div class="select-text">
-                <h2>Search Results</h2>
+
+    <main class="actor__main">
+        <section class="actor__section">
+           <div class="container actor__section__container">
+                <div class="actor_movie_simple">
+                    <h3 class="actor_movie_simple_h3">
+                        Movies
+                    </h3>
+                    <ul class="actor_movie_simple_list">
+                        <li class="actor_movie_simple_list_item">
+                            <img class="actor_movie_simple_list_item_poster" width="130" height="135">
+                            <p class="actor_movie_simple_list_item_title">
+                                Title
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="select-text-box">
-                <h3>Text</h3>
-                <h3>Text</h3>
-                <h3>Text</h3>
-                <h3>Text</h3>
-                <h3>Text</h3>
-                <h3>Text</h3>
-                <h3>Text</h3>
-            </div>
-            
-            <div class="select-pages-box">
-                
-            </div>
-        </div>
-        
-    </div>
+        </section>
+    </main>
+    <script type="module" src="/js/router.js"></script>
+    <script type="module" src="/js/page/actor.js"></script>
 </body>
 </html>
