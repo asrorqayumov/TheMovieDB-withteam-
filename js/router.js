@@ -2,6 +2,7 @@ import * as GetHomeMovies from "./apis/home.js";
 import * as Home from "./page/home.js";
 import * as Movie from "./page/movie_page.js";
 import * as Actor from "./page/actor.js"
+import * as Tv from "./page/tv_page.js"
 let account_id = 20195959;
 window.addEventListener("popstate", (e) => {
   location.reload();
@@ -30,7 +31,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         movieCard.addEventListener("click", (e) => {
           e.preventDefault();
           let id = e.target.id
-          history.pushState({id}, null, `/movie_page.html`);
+          history.pushState({id:id}, null, `/movie_page.html`);
+          location.reload()
+        });
+      });
+      let cards_one = document.querySelectorAll(".content__poster_one");
+      cards_one.forEach((movieCard) => {
+        movieCard.addEventListener("click", (e) => {
+          e.preventDefault();
+          let id = e.target.id
+          history.pushState({id:id}, null, `/tv-page.html`);
           location.reload()
         });
       });
@@ -66,6 +76,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     Actor.Main_Actor(history.state) 
   } else if (location.pathname === "profile.html") {
   }else if (location.pathname === "/tv-page.html"){
-    
+    Tv.hero_all(history.state.id);
+    Tv.keywords_all(history.state.id);
+    Tv.rec_all(history.state.id);
+    Tv.top_cast_all(history.state.id)
+    Tv.coll_all(history.state.id)
+    Tv.favorite__add(history.state.id, history.state.category)
+    Tv.watchlist_add(history.state.id, history.state.category)
   }
 });

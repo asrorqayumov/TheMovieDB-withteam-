@@ -23,9 +23,10 @@ export async function hero_all (id){
     <div class="movie_hero__text">
     <div class="movie_hero__text__title">
     <h1 class="movie_hero__text__title__h1">
-    ${got.original_title}
+    ${got.name}
     <span>
-    (${got.release_date})
+    (${got.first_air_date
+    })
     </span>
     </h1>
     <div class="movie_hero__text__title__small">
@@ -35,8 +36,8 @@ export async function hero_all (id){
     ${genre()}
     </span>
     <span class="movie_hero__text__title__small__runtime">${
-      got.runtime
-    } m</span>
+      got.episode_run_time
+    } m 1 episode</span>
     </div>
     </div>
     <ul class="movie_hero__text__actions">
@@ -120,7 +121,7 @@ export async function rec_all(id){
           }" width="250" height="141" style="border-radius: 20px;">
           <div class="rec__list__item__text">
           <p class="rec__list__item__text__p">
-          ${i.title}
+          ${i.name}
           </p>
           <span class="rec__list__item__text__span">
           ${Math.round(i.vote_average * 10)}%
@@ -146,6 +147,7 @@ export async function rec_all(id){
   }
   Tv.Tv_Recomendations(id).then((data) => {
     recomendations(data);
+    console.log(data);
   });
 }
 // rec_all(569094)
