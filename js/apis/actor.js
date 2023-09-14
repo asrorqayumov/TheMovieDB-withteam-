@@ -22,7 +22,7 @@ export async function getActorInfo(id) {
 export async function Actor_Movies(id) {
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/person/${id}/movie_credits?language=en-US`,
+      `${Config.BASE_URL}/person/${id }/movie_credits?language=en-US`,
       {
         method: 'GET',
         headers: {
