@@ -1,8 +1,8 @@
 import Config from "../../config.js";
-export async function getMovie(id) {
+export async function getTv(id) {
     try {
       const request = await fetch(
-        `${Config.BASE_URL}/movie/${id}?language=en-US`,
+        `${Config.BASE_URL}/tv/${id}?language=en-US`,
         {
           method: "GET",
           headers: {
@@ -19,10 +19,10 @@ export async function getMovie(id) {
       console.log(error , hello);
     }
 }
-export async function Credits(id){
+export async function Tv_Credits(id){
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/movie/${id}/credits?language=en-US`,
+      `${Config.BASE_URL}/tv/${id}/credits?language=en-US`,
       {
         method: "GET",
         headers: {
@@ -40,10 +40,10 @@ export async function Credits(id){
   }
 }
 
-export async function Recomendations(id){
+export async function Tv_Recomendations(id){
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/movie/${id}/recommendations?language=en-US&page=1`,
+      `${Config.BASE_URL}/tv/${id}/recommendations?language=en-US&page=1`,
       {
         method: "GET",
         headers: {
@@ -60,10 +60,10 @@ export async function Recomendations(id){
     console.log(error);
   }
 }
-export async function Keywords(id){
+export async function Tv_Keywords(id){
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/movie/${id}/keywords`,
+      `${Config.BASE_URL}/tv/${id}/keywords`,
       {
         method: "GET",
         headers: {
@@ -105,7 +105,7 @@ export async function category(id,type,why) {
 export async function states(id){
   try {
     const request = await fetch(
-      `${Config.BASE_URL}/movie/${id}/account_states`,
+      `${Config.BASE_URL}/tv/${id}/account_states`,
       {
         method: "GET",
         headers: {
@@ -133,6 +133,7 @@ export async function watchlist (id,type,why){
           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNTEyMGFlNDg1NDY3NDVkMmM5YmMzMzFhZWVlOTc1MSIsInN1YiI6IjY0YmUyM2IwMGVkMmFiMDEzOGY5MTc2ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BrsZNttCB7jIOZxzkqXeWwyQPOet1AuqkZ5BzY-Ytfo'
         },
         body: JSON.stringify({media_type: type, media_id: id, watchlist:why })
+        
       }
     );
     let response = await  request.json();

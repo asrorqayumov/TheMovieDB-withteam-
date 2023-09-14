@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         movieCard.addEventListener("click", (e) => {
           e.preventDefault();
           let id = e.target.id
-          history.pushState({ id }, null, `/movie_page.html`);
+          history.pushState({id}, null, `/movie_page.html`);
           location.reload()
         });
       });
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
   } else if (location.pathname === "/movie_page.html") {
-
+    console.log(history.state.id);
     Movie.hero_all(history.state.id);
     Movie.keywords_all(history.state.id);
     Movie.rec_all(history.state.id);
@@ -65,5 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(history.state);
     Actor.Main_Actor(history.state) 
   } else if (location.pathname === "profile.html") {
+  }else if (location.pathname === "/tv-page.html"){
+    
   }
 });

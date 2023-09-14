@@ -107,4 +107,3 @@ export async function Main_Actor(id){
     })
     
 };
-actors.Actor_Movies(30614).then(data => console.log(data))
