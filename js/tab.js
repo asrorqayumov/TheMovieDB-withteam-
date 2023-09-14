@@ -56,3 +56,4 @@ p2[index1].addEventListener("click" , ()=>{
     list2[index1].classList.add("selected")
    
 })
+
