@@ -1,6 +1,3 @@
-
-
-   
 let tools = document.querySelectorAll(".functions")
 let text = document.querySelectorAll(".content__text")
 let poster = document.querySelectorAll(".content__poster")
@@ -16,8 +13,3 @@ for (const i in arr_icon ) {
         percent[i].classList.toggle("tools_on")
     })
 }
-
-
-
-
-
